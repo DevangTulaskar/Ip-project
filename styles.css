@@ -1,11 +1,10 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Noto Sans', sans-serif;
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
 }
+/*header*/
 
-/* Header */
 header {
   background-color: #070e16;
   padding: 20px;
@@ -16,21 +15,23 @@ header {
 
 .logo img {
   height: 60px;
-  margin-left: 50px;
+  margin-left:50px;
 }
 
 nav ul {
   list-style: none;
-  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li {
-  margin-right: 20px;
+  display: inline-block;
+  margin-right: 15px;
 }
 
 nav ul li a {
-  color: white;
   text-decoration: none;
+  color: white;
   font-weight: bold;
   transition: color 0.3s ease;
 }
@@ -39,45 +40,26 @@ nav ul li a:hover {
   color: #ff0000;
 }
 
-/* Cart Icon */
-.cart {
-  position: relative;
-  margin-right: 50px;
-  cursor: pointer;
-}
+/*hero*/
 
-.cart img {
-  width: 40px;
-}
-
-#cart-count {
-  background-color: red;
-  color: white;
-  font-size: 12px;
-  border-radius: 50%;
-  padding: 2px 6px;
-  position: absolute;
-  top: -8px;
-  right: -8px;
-}
-
-/* Hero Section */
 .hero {
   background-image: url("hero-background1.jpg");
   background-size: cover;
   background-position: center;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
-  align-items: center;
+
+
   text-align: left;
   color: #fff;
-  padding: 20px;
 }
 
 .hero-content {
   max-width: 600px;
   padding: 20px;
+  margin-top :50px;
   margin-left: 4%;
+  
 }
 
 .hero-content h1 {
@@ -105,12 +87,12 @@ nav ul li a:hover {
   background-color: #e60000;
 }
 
-/* About Section */
+/*about*/
+
 .about {
   display: flex;
   align-items: center;
   padding: 80px 0;
-  background-color: #070e16;
 }
 
 .about-content {
@@ -119,6 +101,8 @@ nav ul li a:hover {
   padding-right: 50px;
   color: #fff;
   margin-left: 5%;
+  
+  
 }
 
 .about h2 {
@@ -142,7 +126,12 @@ nav ul li a:hover {
   border-radius: 5px;
 }
 
-/* Menu Section */
+.dark-theme {
+  background-color: #070e16;
+}
+
+
+/* menu*/
 .menu {
   padding: 80px 0;
   text-align: center;
@@ -158,16 +147,11 @@ nav ul li a:hover {
 .menu-items {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
 .menu-item {
   max-width: 300px;
-  margin: 20px;
-  background-color: #1f1f1f;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  margin: 0 20px;
   text-align: left;
 }
 
@@ -190,23 +174,8 @@ nav ul li a:hover {
   color: #ffffff;
 }
 
-.menu-item button {
-  background-color: #ff0000;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  margin-top: 10px;
-  transition: background-color 0.3s ease;
-}
+/* reservations*/
 
-.menu-item button:hover {
-  background-color: #e60000;
-}
-
-/* Reservation Section */
 .reservations {
   background-color: #1f1f1f;
   padding: 80px 0;
@@ -239,20 +208,93 @@ nav ul li a:hover {
 }
 
 .reservation-form form button {
+  display: inline-block;
   background-color: #ff0000;
   color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
+  text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
-  border: none;
 }
 
 .reservation-form form button:hover {
   background-color: #e60000;
 }
 
-/* Contact Section */
+
+/* Testimonials Section*/
+
+.testimonials {
+  padding: 80px 0;
+  text-align: center;
+  background-color: #070e16;
+}
+
+.testimonials h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.testimonial {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  text-align: left;
+}
+
+.testimonial img {
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+}
+
+.testimonial p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.testimonial h4 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+
+/* Gallery Section*/
+
+.gallery {
+  padding: 80px 0;
+  text-align: center;
+  background-color: #070e16;
+}
+
+.gallery h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+
+/* Contact Section*/
+
 .contact {
   background-color: #333;
   padding: 80px 0;
@@ -281,6 +323,11 @@ nav ul li a:hover {
   text-align: center;
 }
 
+.info-item i {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
 .contact-form input,
 .contact-form textarea {
   display: block;
@@ -296,81 +343,23 @@ nav ul li a:hover {
 }
 
 .contact-form button {
+  display: inline-block;
   background-color: #ff0000;
   color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
+  text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
-  border: none;
 }
 
 .contact-form button:hover {
   background-color: #e60000;
 }
 
-/* Cart Popup */
-.cart-popup {
-  position: fixed;
-  top: 20%;
-  right: 5%;
-  width: 300px;
-  background-color: #fff;
-  color: #000;
-  padding: 20px;
-  border-radius: 10px;
-  display: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-  z-index: 100;
-  transform: translateY(-30px);
-  opacity: 0;
-  transition: all 0.4s ease;
-}
 
-.cart-popup.show {
-  display: block;
-  transform: translateY(0);
-  opacity: 1;
-}
+/* Footer*/
 
-.cart-popup h2 {
-  margin-bottom: 20px;
-}
-
-.cart-popup ul {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 20px;
-  max-height: 200px;
-  overflow-y: auto;
-}
-
-.cart-popup ul li {
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.cart-total {
-  margin-bottom: 20px;
-}
-
-#close-cart {
-  background-color: #ff0000;
-  color: white;
-  padding: 10px;
-  border: none;
-  width: 100%;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-#close-cart:hover {
-  background-color: #e60000;
-}
-
-/* Footer */
 .footer {
   background-color: #070e16;
   padding: 40px 0;
@@ -403,62 +392,4 @@ nav ul li a:hover {
 
 .footer-text {
   font-size: 14px;
-}
-
-/* ------------------- */
-/* Mobile View */
-@media (max-width: 768px) {
-  
-  header {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
-
-  .cart {
-    margin-top: 10px;
-  }
-
-  .hero-content {
-    text-align: center;
-    margin: 0 auto;
-  }
-
-  .hero-content h1 {
-    font-size: 32px;
-  }
-
-  .hero-content p {
-    font-size: 18px;
-  }
-
-  .menu-items {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .menu-item {
-    width: 80%;
-    margin-bottom: 20px;
-  }
-
-  .reservation-form {
-    width: 90%;
-  }
-
-  .contact-container {
-    width: 90%;
-  }
-
-  .footer-content {
-    flex-direction: column;
-  }
 }
