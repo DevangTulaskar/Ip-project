@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: 'Noto Sans', sans-serif;
 }
 
@@ -65,11 +66,12 @@ nav ul li a:hover {
   background-image: url("hero-background1.jpg");
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   text-align: left;
   color: #fff;
+  padding: 20px;
 }
 
 .hero-content {
@@ -188,7 +190,6 @@ nav ul li a:hover {
   color: #ffffff;
 }
 
-/* Add to Cart Button */
 .menu-item button {
   background-color: #ff0000;
   color: white;
@@ -402,4 +403,62 @@ nav ul li a:hover {
 
 .footer-text {
   font-size: 14px;
+}
+
+/* ------------------- */
+/* Mobile View */
+@media (max-width: 768px) {
+  
+  header {
+    flex-direction: column;
+    align-items: center;
   }
+
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .cart {
+    margin-top: 10px;
+  }
+
+  .hero-content {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+  }
+
+  .menu-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-item {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .reservation-form {
+    width: 90%;
+  }
+
+  .contact-container {
+    width: 90%;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+}
